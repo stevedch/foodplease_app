@@ -11,10 +11,10 @@ class LoginHeader extends StatelessWidget {
   static const double _fieldHeight = 56;
 
   const LoginHeader({
-    Key? key,
+    super.key,
     required this.headerHeight,
     required this.overlap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

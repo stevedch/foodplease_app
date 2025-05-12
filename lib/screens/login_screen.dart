@@ -3,7 +3,7 @@ import '../widgets/login_header.dart';
 import '../widgets/login_form.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   static const double _headerFraction = 0.60;
   static const double _overlap = 32;
