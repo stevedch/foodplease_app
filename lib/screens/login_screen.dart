@@ -124,16 +124,24 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: _primaryColor,
+                        // Teal background
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(_borderRadius),
+                          borderRadius: BorderRadius.circular(
+                            _borderRadius,
+                          ), // Fully rounded
                         ),
                         elevation: 4,
                         shadowColor: Colors.black26,
                       ),
                       child: const Text(
                         'Login',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(
+                          fontSize: 16,
+                          color:
+                              Colors
+                                  .white, // Make text white to match the image
+                        ),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -148,20 +156,27 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    OutlinedButton(
+                    ElevatedButton(
                       onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        side: const BorderSide(color: _primaryColor),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFC4DCD9),
+                        // Light green background
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(_borderRadius),
+                          borderRadius: BorderRadius.circular(
+                            40,
+                          ), // Fully rounded corners
                         ),
                         elevation: 4,
+                        // Soft shadow
                         shadowColor: Colors.black26,
                       ),
                       child: const Text(
                         'Create an account',
-                        style: TextStyle(color: _primaryColor, fontSize: 16),
+                        style: TextStyle(
+                          color: Color(0xFF2E4F4A), // Dark green text
+                          fontSize: 16,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 32),
