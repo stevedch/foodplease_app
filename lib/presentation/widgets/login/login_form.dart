@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../screens/forgot_password_screen.dart';
-import '../screens/home_screen.dart';
-import '../screens/register_screen.dart';
+import '../../screens/forgot_password_screen.dart';
+import '../../screens/home_screen.dart';
+import '../../screens/register_screen.dart';
 
 class LoginForm extends StatelessWidget {
   static const double _borderRadius = 32;

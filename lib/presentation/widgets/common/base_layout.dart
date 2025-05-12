@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../screens/cart_screen.dart';
-import '../screens/home_screen.dart';
+import '../../screens/cart_screen.dart';
+import '../../screens/home_screen.dart';
 
 class BaseLayout extends StatelessWidget {
   final String title;
