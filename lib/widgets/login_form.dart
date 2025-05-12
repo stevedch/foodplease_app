@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../screens/forgot_password_screen.dart';
+import '../screens/menu_screen.dart';
+import '../screens/register_screen.dart';
+
 class LoginForm extends StatelessWidget {
   static const double _borderRadius = 32;
   static const double _hPadding = 32;
@@ -29,7 +33,15 @@ class LoginForm extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  // This would trigger reset logic in a real app
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const ForgotPasswordScreen(),
+                    ),
+                  );
+                },
                 child: const Text(
                   'Forgot Password?',
                   style: TextStyle(color: _primaryColor),
@@ -38,7 +50,13 @@ class LoginForm extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // This would trigger reset logic in a real app
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => const MenuScreen()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: _primaryColor,
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -66,7 +84,13 @@ class LoginForm extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // This would trigger reset logic in a real app
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => const RegisterScreen()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFFC4DCD9),
                 padding: const EdgeInsets.symmetric(vertical: 16),
