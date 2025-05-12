@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/login_screen.dart';
 
 void main() {
@@ -14,8 +15,9 @@ class FoodPleaseApp extends StatelessWidget {
       title: 'FoodPlease',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        fontFamily: GoogleFonts.poppins().fontFamily,
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF00A89D)),
+        useMaterial3: false,
       ),
       home: const LoginScreen(),
     );
