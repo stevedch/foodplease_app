@@ -58,8 +58,8 @@ class LoginScreen extends StatelessWidget {
                       Center(
                         child: Image.asset(
                           'assets/logo_login.png',
-                          width: 250,
-                          height: 250,
+                          width: 800,
+                          height: 270,
                         ),
                       ),
 
@@ -197,20 +197,27 @@ class LoginScreen extends StatelessWidget {
   }) {
     return SizedBox(
       height: _fieldHeight,
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.white, width: 2),
-          borderRadius: BorderRadius.circular(_borderRadius),
-        ),
-        child: TextField(
-          obscureText: obscure,
-          style: const TextStyle(color: Colors.white),
-          decoration: InputDecoration(
-            prefixIcon: Icon(icon, color: Colors.white),
-            hintText: hint,
-            hintStyle: const TextStyle(color: Colors.white70),
-            border: InputBorder.none,
-            contentPadding: const EdgeInsets.symmetric(vertical: 16),
+      child: TextField(
+        obscureText: obscure,
+        style: const TextStyle(color: Colors.white),
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.transparent,
+          prefixIcon: Icon(icon, color: Colors.white70),
+          hintText: hint,
+          hintStyle: const TextStyle(color: Colors.white70),
+          contentPadding: const EdgeInsets.symmetric(vertical: 16),
+          enabledBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.white, width: 2),
+            borderRadius: BorderRadius.circular(_borderRadius),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.white, width: 2),
+            borderRadius: BorderRadius.circular(_borderRadius),
+          ),
+          border: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.circular(_borderRadius),
           ),
         ),
       ),
