@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foodplease_app/presentation/screens/login_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'screens/login_screen.dart';
 
 void main() {
   runApp(const FoodPleaseApp());
