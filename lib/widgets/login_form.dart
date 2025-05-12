@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/forgot_password_screen.dart';
-import '../screens/menu_screen.dart';
+import '../screens/home_screen.dart';
 import '../screens/register_screen.dart';
 
 class LoginForm extends StatelessWidget {
@@ -54,7 +54,7 @@ class LoginForm extends StatelessWidget {
                 // This would trigger reset logic in a real app
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (_) => const MenuScreen()),
+                  MaterialPageRoute(builder: (_) => const HomeScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
