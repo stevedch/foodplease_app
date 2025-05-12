@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/base_layout.dart';
+
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 
@@ -18,59 +20,15 @@ class CartScreen extends StatelessWidget {
           sum + (item['price'] as double) * (item['quantity'] as int),
     );
 
-    return Scaffold(
-      appBar: AppBar(title: const Text('Your Cart'), centerTitle: true),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
+    return BaseLayout(
+      title: '',
+      headerIcon: Icons.shopping_cart_outlined,
+      currentIndex: 3,
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                itemCount: cartItems.length,
-                itemBuilder: (context, index) {
-                  final item = cartItems[index];
-                  return Card(
-                    child: ListTile(
-                      title: Text(item['name'] as String),
-                      subtitle: Text('Quantity: ${item['quantity']}'),
-                      trailing: Text(
-                        '\$${(item['price'] as double).toStringAsFixed(2)}',
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-            const Divider(thickness: 1),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  'Total:',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  '\$${total.toStringAsFixed(2)}',
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 24),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Checkout not implemented')),
-                  );
-                },
-                child: const Text('Checkout'),
-              ),
-            ),
-          ],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [],
         ),
       ),
     );

@@ -4,24 +4,28 @@ import '../widgets/base_layout.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
   static const Color primaryColor = Color(0xFF00A89D);
 
   @override
   Widget build(BuildContext context) {
     final topCategories = [
-      {'label': 'Menu',      'icon': Icons.restaurant_menu},
-      {'label': 'Pizza',     'icon': Icons.local_pizza},
+      {'label': 'Menu', 'icon': Icons.restaurant_menu},
+      {'label': 'Pizza', 'icon': Icons.local_pizza},
       {'label': 'Beverages', 'icon': Icons.local_drink},
-      {'label': 'Soups',     'icon': Icons.ramen_dining},
+      {'label': 'Soups', 'icon': Icons.ramen_dining},
     ];
 
     final popularCategories = [
       {'label': 'Burgers', 'icon': Icons.lunch_dining},
-      {'label': 'Salads',  'icon': Icons.rice_bowl},
+      {'label': 'Salads', 'icon': Icons.rice_bowl},
       {'label': 'Deserts', 'icon': Icons.cake},
-      {'label': 'Snacks',  'icon': Icons.fastfood},
+      {'label': 'Snacks', 'icon': Icons.fastfood},
     ];
     return BaseLayout(
+      title: 'Home',
+      headerIcon: Icons.home,
+      currentIndex: 0,
       child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Column(
@@ -33,18 +37,22 @@ class HomeScreen extends StatelessWidget {
                 // ── TOP CATEGORY NAV ──
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: topCategories.map((item) {
-                    return Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: const Color(0xFFE1F4F3),
-                          child: Icon(item['icon'] as IconData, color: primaryColor),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(item['label'] as String),
-                      ],
-                    );
-                  }).toList(),
+                  children:
+                      topCategories.map((item) {
+                        return Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: const Color(0xFFE1F4F3),
+                              child: Icon(
+                                item['icon'] as IconData,
+                                color: primaryColor,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(item['label'] as String),
+                          ],
+                        );
+                      }).toList(),
                 ),
 
                 const SizedBox(height: 24),
@@ -66,14 +74,23 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             const Text(
                               'Deal of the day',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
                             const SizedBox(height: 4),
-                            const Text('Pizza + drink', style: TextStyle(fontSize: 16)),
+                            const Text(
+                              'Pizza + drink',
+                              style: TextStyle(fontSize: 16),
+                            ),
                             const SizedBox(height: 8),
                             const Text(
                               '\$ 5.99',
-                              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                             const SizedBox(height: 8),
                             ElevatedButton(
@@ -122,18 +139,22 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 12),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: popularCategories.map((item) {
-                    return Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: const Color(0xFFE1F4F3),
-                          child: Icon(item['icon'] as IconData, color: primaryColor),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(item['label'] as String),
-                      ],
-                    );
-                  }).toList(),
+                  children:
+                      popularCategories.map((item) {
+                        return Column(
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: const Color(0xFFE1F4F3),
+                              child: Icon(
+                                item['icon'] as IconData,
+                                color: primaryColor,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(item['label'] as String),
+                          ],
+                        );
+                      }).toList(),
                 ),
 
                 const SizedBox(height: 24),
@@ -161,12 +182,18 @@ class HomeScreen extends StatelessWidget {
                         children: const [
                           Text(
                             'Salads',
-                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           SizedBox(height: 4),
                           Text(
                             '\$ 6.99',
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ],
                       ),
@@ -174,7 +201,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
