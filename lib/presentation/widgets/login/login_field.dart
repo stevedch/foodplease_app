@@ -7,6 +7,7 @@ class LoginField extends StatelessWidget {
   final double height;
   final double borderRadius;
   final ValueChanged<String>? onChanged;
+  final Key? fieldKey;
 
   const LoginField({
     super.key,
@@ -16,6 +17,7 @@ class LoginField extends StatelessWidget {
     required this.height,
     required this.borderRadius,
     this.onChanged,
+    this.fieldKey,
   });
 
   @override
@@ -23,6 +25,7 @@ class LoginField extends StatelessWidget {
     return SizedBox(
       height: height,
       child: TextField(
+        key: fieldKey,
         obscureText: obscure,
         onChanged: onChanged,
         style: const TextStyle(color: Colors.white),

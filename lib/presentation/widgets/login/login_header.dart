@@ -34,7 +34,7 @@ class LoginHeader extends StatelessWidget {
               Row(
                 children: List.generate(
                   3,
-                  (i) => Container(
+                      (i) => Container(
                     width: 8,
                     height: 8,
                     margin: EdgeInsets.only(right: i < 2 ? 6 : 0),
@@ -60,8 +60,9 @@ class LoginHeader extends StatelessWidget {
                 hint: 'Email or Phone',
                 height: _fieldHeight,
                 borderRadius: _borderRadius,
-                onChanged:
-                    (value) => context.read<LoginCubit>().updateEmail(value),
+                fieldKey: const Key('emailTextField'),
+                onChanged: (value) =>
+                    context.read<LoginCubit>().updateEmail(value),
               ),
               const SizedBox(height: _fieldGap),
               LoginField(
@@ -70,8 +71,9 @@ class LoginHeader extends StatelessWidget {
                 obscure: true,
                 height: _fieldHeight,
                 borderRadius: _borderRadius,
-                onChanged:
-                    (value) => context.read<LoginCubit>().updatePassword(value),
+                fieldKey: const Key('passwordTextField'),
+                onChanged: (value) =>
+                    context.read<LoginCubit>().updatePassword(value),
               ),
               SizedBox(height: overlap),
             ],
