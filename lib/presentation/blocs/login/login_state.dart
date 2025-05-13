@@ -1,4 +1,6 @@
-class LoginState {
+import 'package:equatable/equatable.dart';
+
+class LoginState extends Equatable {
   final String email;
   final String password;
   final bool isSubmitting;
@@ -28,4 +30,13 @@ class LoginState {
       errorMessage: errorMessage,
     );
   }
+
+  @override
+  List<Object?> get props => [
+    email,
+    password,
+    isSubmitting,
+    isSuccess,
+    errorMessage,
+  ];
 }
