@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'login_field.dart';
+import '../../../presentation/blocs/login/login_cubit.dart';
 
 class LoginHeader extends StatelessWidget {
   final double headerHeight;
   final double overlap;
+
   static const Color _primaryColor = Color(0xFF00A89D);
   static const double _hPadding = 32;
   static const double _fieldGap = 16;
@@ -57,6 +60,8 @@ class LoginHeader extends StatelessWidget {
                 hint: 'Email or Phone',
                 height: _fieldHeight,
                 borderRadius: _borderRadius,
+                onChanged:
+                    (value) => context.read<LoginCubit>().updateEmail(value),
               ),
               const SizedBox(height: _fieldGap),
               LoginField(
@@ -65,6 +70,8 @@ class LoginHeader extends StatelessWidget {
                 obscure: true,
                 height: _fieldHeight,
                 borderRadius: _borderRadius,
+                onChanged:
+                    (value) => context.read<LoginCubit>().updatePassword(value),
               ),
               SizedBox(height: overlap),
             ],

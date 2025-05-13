@@ -6,6 +6,7 @@ class LoginField extends StatelessWidget {
   final bool obscure;
   final double height;
   final double borderRadius;
+  final ValueChanged<String>? onChanged;
 
   const LoginField({
     super.key,
@@ -14,6 +15,7 @@ class LoginField extends StatelessWidget {
     this.obscure = false,
     required this.height,
     required this.borderRadius,
+    this.onChanged,
   });
 
   @override
@@ -22,6 +24,7 @@ class LoginField extends StatelessWidget {
       height: height,
       child: TextField(
         obscureText: obscure,
+        onChanged: onChanged,
         style: const TextStyle(color: Colors.white),
         decoration: InputDecoration(
           prefixIcon: Icon(icon, color: Colors.white70),
