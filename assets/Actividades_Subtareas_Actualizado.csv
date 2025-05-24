@@ -1,0 +1,28 @@
+Fase,Tarea Principal,Subtarea,Rol,Inicio,Fin,Duración (días)
+Sprint 1: Preparación,Compra de equipo y licencias,,R&D Lead,2025-06-02,2025-06-20,19
+Sprint 1: Preparación,Compra de equipo y licencias,Revisión de proveedores,R&D Lead,2025-06-02,2025-06-06,5
+Sprint 1: Preparación,Compra de equipo y licencias,Adquisición de hardware,R&D Lead,2025-06-09,2025-06-13,5
+Sprint 1: Preparación,Compra de equipo y licencias,Adquisición de software y licencias,R&D Lead,2025-06-16,2025-06-20,5
+Sprint 1: Preparación,Configuración de entorno y CI/CD pipelines,,Arquitecto de Datos,2025-06-02,2025-06-20,19
+Sprint 1: Preparación,Configuración de entorno y CI/CD pipelines,Instalación de servidores y herramientas,Arquitecto de Datos,2025-06-02,2025-06-08,7
+Sprint 1: Preparación,Configuración de entorno y CI/CD pipelines,Configuración de repositorios Git,Arquitecto de Datos,2025-06-09,2025-06-13,5
+Sprint 1: Preparación,Configuración de entorno y CI/CD pipelines,Pipelines de build y test,Arquitecto de Datos,2025-06-16,2025-06-18,3
+Sprint 1: Preparación,Configuración de entorno y CI/CD pipelines,Pipelines de despliegue,Arquitecto de Datos,2025-06-19,2025-06-20,2
+Sprint 1: Preparación,Configuración de entorno y CI/CD pipelines,Colaboración y desarrollo de pipelines,Líder de Departamento I+D,2025-06-02,2025-06-20,19
+Sprint 2: Gobernanza & Setup,Definición del marco de gobernanza,,Arquitecto de Datos,2025-06-23,2025-07-11,19
+Sprint 2: Gobernanza & Setup,Definición del marco de gobernanza,Establecer roles y responsabilidades,Arquitecto de Datos,2025-06-23,2025-06-27,5
+Sprint 2: Gobernanza & Setup,Definición del marco de gobernanza,Documentación de políticas y procesos,Arquitecto de Datos,2025-06-30,2025-07-04,5
+Sprint 2: Gobernanza & Setup,Definición del marco de gobernanza,Revisión con stakeholders,Arquitecto de Datos,2025-07-07,2025-07-11,5
+Sprint 2: Gobernanza & Setup,Diseño e implementación de autenticación de usuario,,Arquitecto de Datos,2025-06-23,2025-07-11,19
+Sprint 2: Gobernanza & Setup,Diseño e implementación de autenticación de usuario,Selección de proveedor IAM,Arquitecto de Datos,2025-06-23,2025-06-27,5
+Sprint 2: Gobernanza & Setup,Diseño e implementación de autenticación de usuario,Diseño de flujos de login,Arquitecto de Datos,2025-06-30,2025-07-04,5
+Sprint 2: Gobernanza & Setup,Diseño e implementación de autenticación de usuario,Implementación OAuth 2.0,Arquitecto de Datos,2025-07-07,2025-07-11,5
+Sprint 2: Gobernanza & Setup,Provisionamiento de infraestructura AWS,,Arquitecto de Datos,2025-06-23,2025-07-11,19
+Sprint 2: Gobernanza & Setup,Provisionamiento de infraestructura AWS,Creación de VPC y subnets,Arquitecto de Datos,2025-06-23,2025-06-27,5
+Sprint 2: Gobernanza & Setup,Provisionamiento de infraestructura AWS,Despliegue de EC2 y RDS,Arquitecto de Datos,2025-06-30,2025-07-04,5
+Sprint 2: Gobernanza & Setup,Provisionamiento de infraestructura AWS,Configuración de IAM roles,Arquitecto de Datos,2025-07-07,2025-07-11,5
+Sprint 3: Planificación Estratégica,Business Model Canvas & Requirements,,Líder de Departamento I+D,2025-07-14,2025-08-01,19
+Sprint 3: Planificación Estratégica,Business Model Canvas & Requirements,Planificación detallada de sprints y objetivos,Líder de Departamento I+D,2025-07-14,2025-07-18,5
+Sprint 6: Implementación PoC,Microservices PoC Implementation,,Arquitecto de Datos / R&D Lead,2025-09-01,2025-09-19,19
+Sprint 6: Implementación PoC,Microservices PoC Implementation,Desarrollo Backend,Líder de Departamento I+D,2025-09-01,2025-09-19,19
+Sprint 6: Implementación PoC,Microservices PoC Implementation,Desarrollo Frontend,Líder de Departamento I+D,2025-09-01,2025-09-19,19

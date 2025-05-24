@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
             loginUseCase: LoginUseCaseImpl(
               UserRemoteDataSource(
                 client: http.Client(),
-                baseUrl: 'https://api.foodplease.com',
+                baseUrl: 'https://foodplease-backend.onrender.com',
               ),
             ),
           ),

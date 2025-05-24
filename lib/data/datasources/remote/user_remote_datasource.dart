@@ -12,9 +12,9 @@ class UserRemoteDataSource {
     required String password,
   }) async {
     final response = await client.post(
-      Uri.parse('$baseUrl/api/auth/login'),
+      Uri.parse('$baseUrl/auth/login'),
       headers: {'Content-Type': 'application/json'},
-      body: json.encode({'email': email, 'password': password}),
+      body: json.encode({'username': email, 'password': password}),
     );
 
     if (response.statusCode == 200) {
